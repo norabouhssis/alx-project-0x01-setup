@@ -1,16 +1,6 @@
 import { UserProps } from "@/interfaces";
 
-interface UserCardProps {
-  user: UserProps;
-  avatarUrl?: string;
-  isOnline?: boolean;
-}
-
-const UserCard: React.FC<UserCardProps> = ({
-  user,
-  avatarUrl,
-  isOnline = false,
-}) => {
+const UserCard: React.FC<UserProps> = (user) => {
   return (
     <div
       style={{
@@ -27,10 +17,7 @@ const UserCard: React.FC<UserCardProps> = ({
     >
       <div style={{ position: "relative" }}>
         <img
-          src={
-            avatarUrl ||
-            `https://api.dicebear.com/7.x/avataaars/svg?seed=${user.username}`
-          }
+          src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${user.username}`}
           alt={user.name}
           style={{
             width: "64px",
@@ -40,22 +27,6 @@ const UserCard: React.FC<UserCardProps> = ({
             border: "2px solid #4299e1",
           }}
         />
-        {isOnline && (
-          <span
-            style={{
-              position: "absolute",
-              bottom: "6px",
-              right: "6px",
-              width: "14px",
-              height: "14px",
-              background: "#38a169",
-              border: "2px solid #fff",
-              borderRadius: "50%",
-              display: "block",
-            }}
-            title="Online"
-          />
-        )}
       </div>
       <div>
         <div style={{ fontWeight: 700, fontSize: "1.1rem" }}>{user.name}</div>

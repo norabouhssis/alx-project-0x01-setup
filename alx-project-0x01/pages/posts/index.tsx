@@ -2,7 +2,8 @@ import PostCard from "@/components/common/PostCard";
 import PostModal from "@/components/common/PostModal";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { PostData, PostProps } from "@/interfaces";
+import { PostData } from "@/interfaces";
+import { PostProps } from "@/interfaces";
 import { useState } from "react";
 
 interface PostsPageProps {

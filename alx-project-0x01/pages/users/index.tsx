@@ -2,7 +2,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import UserCard from "@/components/common/UserCard";
 import UserModal from "@/components/common/UserModal";
-import { UserProps, UserData } from "@/interfaces";
+import { UserProps } from "@/interfaces";
+import { UserData } from "@/interfaces";
 import { useState } from "react";
 
 interface UsersProps {

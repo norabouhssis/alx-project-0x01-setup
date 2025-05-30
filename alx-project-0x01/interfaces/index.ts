@@ -65,3 +65,8 @@ export interface UserData {
     bs: string;
   };
 }
+
+export interface UserModalProps {
+  onClose: () => void;
+  onSubmit: (post: UserProps) => void;
+}

@@ -1,4 +1,5 @@
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import UserCard from "@/components/common/UserCard";
 import UserModal from "@/components/common/UserModal";
 import { UserProps, UserData } from "@/interfaces";
@@ -35,6 +36,7 @@ const Users: React.FC<UsersProps> = ({ posts }) => {
           ))}
         </div>
       </main>
+      <Footer />
       {isModalOpen && (
         <UserModal onClose={() => setModalOpen(false)} onSubmit={handleAddUser} />
       )}

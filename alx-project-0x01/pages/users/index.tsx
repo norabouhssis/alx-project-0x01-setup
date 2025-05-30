@@ -6,7 +6,7 @@ import { UserProps, UserData } from "@/interfaces";
 import { useState } from "react";
 
 interface UsersProps {
-  users: UserProps[];
+  posts: UserProps[];
 }
 
 const Users: React.FC<UsersProps> = ({ posts }) => {
